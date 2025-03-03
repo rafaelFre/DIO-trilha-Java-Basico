@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Locale;
+
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
@@ -25,6 +27,7 @@ public class ContaTerminal {
         //Exibir mensagem 
 
         String mensagem  = "Olá " + nomeClinte + ", obrigado por criar uma conta em nosso banco , sua Agencia é :" +  agencia + "e numero da conta : "+ numeroConta +"aldo atual:  " + saldo + "Ja esta disponivel para saque.";
+        
 
         System.out.println(mensagem);
         scanner.close();
