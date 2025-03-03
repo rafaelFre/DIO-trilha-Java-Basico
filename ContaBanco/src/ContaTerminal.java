@@ -8,12 +8,12 @@ public class ContaTerminal {
         //Solitacação dos  Dados 
 
         System.out.println("Por favor , digite o numero da Agencia ");
-        int agencia = scanner.nextLine();
+        String agencia = scanner.nextLine();
 
         
 
         System.out.println("Por favor digite o número da conta: ");
-        int numeroConta = scanner.nextLine();
+        String  numeroConta = scanner.nextLine();
         scanner.nextLine(); // Consumir a quebra de linha 
 
         System.out.println("Por favor, digite o nome do Cliente : ");
