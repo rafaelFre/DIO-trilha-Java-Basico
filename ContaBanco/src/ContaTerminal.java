@@ -10,6 +10,8 @@ public class ContaTerminal {
         System.out.println("Por favor , digite o numero da Agencia ");
         int agencia = scanner.nextLine();
 
+        
+
         System.out.println("Por favor digite o número da conta: ");
         int numeroConta = scanner.nextLine();
         scanner.nextLine(); // Consumir a quebra de linha 
@@ -22,8 +24,10 @@ public class ContaTerminal {
 
         //Exibir mensagem 
 
-        
+        String mensagem  = "Olá " + nomeClinte + ", obrigado por criar uma conta em nosso banco , sua é :" + agencia + ",Conta" + numeroConta + "e seu saldo " + saldo + "Ja esta disponivel para saque.";
 
+        System.out.println(mensagem);
+        scanner.close();
 
 
     }
