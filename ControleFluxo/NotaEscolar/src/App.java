@@ -1,20 +1,17 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        int nota = 10;
+        int nota = 9;
 
-        if(nota >= 7)
-         System.out.println("Aprovado");
-
-         else if (nota >= 5 && nota < 7 )
-         System.out.println("Prova Recuperação");
-
-         else if (nota >= 5 && nota < 7)
-         System.out.println("Prova Recuperação");
-
-        
-        else 
-        System.out.println("Reprovado"); 
-        
+        if (nota == 10) {
+            System.out.println("Parabéns Nota Muito alta");
+        } else if (nota >= 9) {
+            System.out.println("quase tirou um 10 - Apro.");
+        } else if (nota >= 6) {
+            System.out.println("Aprovado");
+        } else if (nota >= 5) {
+            System.out.println("Recuperação");
+        } else {
+            System.out.println("Reprovado");
+        }
     }
 }
-
