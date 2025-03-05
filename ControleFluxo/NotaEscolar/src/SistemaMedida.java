@@ -16,6 +16,8 @@ public class SistemaMedida {
                 System.out.println("Grande");
                 break;
             }
+            default:
+                System.out.println("Indefinido");
 
             
         }        /*
