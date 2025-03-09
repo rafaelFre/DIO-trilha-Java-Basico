@@ -1,29 +1,38 @@
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class App {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        try {
+            // Entrada de dados pelo usuário...
+            System.out.println("Digite seu nome: ");
+            String nome = scanner.next(); // Leitura do nome
 
-        // Entrada de dados pelo usuario...
-        System.out.println("Digite seu nome ");
-        String nome = scanner.next();
+            System.out.println("Digite seu Sobrenome: ");
+            String Sobrenome = scanner.next(); // Leitura do nome
 
-        System.out.println("Digite seu sobrenome ");
-        String Sobbrenome = scanner.next();
+            // Limpeza do buffer para a próxima entrada
+            scanner.nextLine(); // Consumir a quebra de linha deixada pelo nextInt()
 
-        System.out.println("Digite sua idade: ");
-        String idade= scanner.next();
+            System.out.println("Digite sua idade: ");
+            int idade = scanner.nextInt(); // Leitura da idade
 
-        System.out.println("Digite sua Altura ");
-        String altura = scanner.next();
+            System.out.println("Digite sua altura: ");
+            Double altura = scanner.nextDouble(); // Leitura da altura
 
-        // imprimindo os dados obtidos pelo usuario
+            // Imprimindo os dados obtidos pelo usuário
+            System.out.println("\nOlá, me chamo " + nome.toUpperCase() + Sobrenome);
+            System.out.println("Tenho " + idade + " anos");
+            System.out.println("Minha altura é: " + altura + " cm");
 
-        System.out.println("\nOlá,  me chamo, " + nome.toUpperCase() + "");
-        System.out.println("Tenho " + idade + " Anos");
-        System.out.println("Minha altura é: " + altura + " cm");
-        scanner.close();
+        } catch (InputMismatchException e) {
+            System.out.println("O campos idade e altura prescisam ser numericos");
+        } finally {
+            scanner.close();
+        }
 
     }
 }
